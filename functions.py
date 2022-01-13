@@ -18,5 +18,15 @@ def get_tags(data):
                 results.add(word[1:])
     return results
 
+
+def get_posts_by_tag(data, tag):
+    results = []
+    for record in data:
+        if f'#{tag}' in record['content']:
+            results.append(record)
+    return results
+
+
 # pprint.pprint(read_json('posts.json'))
 # print(get_tags(read_json('posts.json')))
+# pprint.pprint(get_posts_by_tag(read_json('posts.json'), 'пирог'))

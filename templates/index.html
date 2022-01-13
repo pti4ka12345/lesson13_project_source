@@ -11,12 +11,12 @@
 
     <h1>Поиск постов</h1>
 
-    <form action="post_by_tag.html">
+    <form action="/tag">
         <p>По тегу</p>
         <label>
             <select name="tag" >
                 {% for tag in tags %}
-                    <option value="{{tag}">{{tag}}</option>
+                    <option value="{{tag}}">{{tag}}</option>
                 {% endfor %}
             </select>
         </label>
